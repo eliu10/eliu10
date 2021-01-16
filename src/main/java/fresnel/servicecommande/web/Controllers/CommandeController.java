@@ -28,7 +28,6 @@ public class CommandeController {
 
         return new ResponseEntity<Commande>(commande, HttpStatus.CREATED);
     }
-
     @GetMapping(value = "/commandes/{id}")
     public Optional<Commande> recupererUneCommande(@PathVariable int id) {
 
@@ -40,7 +39,7 @@ public class CommandeController {
         return commande;
     }
     @GetMapping(value = "/")
-    public String Home(@PathVariable int id) {
+    public String Home() {
         return "Hello World !!";
     }
 }
